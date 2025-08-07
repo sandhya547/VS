@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cake Time! 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cake-page">
+
+  <div class="cake-container">
+    <img src="C:\Users\sandh\Downloads\cake.jpeg" alt="Anniversary Cake" class="cake-img">
+    <h1 class="title">🎂 I Cooked An Anniversary Cake For You! 🎂</h1>
+    <p class="subtitle">Make a wish and cut the cake bb...</p>
+    <button id="cutButton" class="love-button" onclick="cutCake()">🍴 Cut the Cake!</button>
+  </div>
+
+  <div class="balloon-container" id="balloonContainer">
+
+<div class="balloon">
+  <div class="string"></div>
+</div>
+
+    <!-- Balloons will be generated dynamically -->
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+const colors = [
+    'rgba(239, 68, 68, 0.7)',    // Red
+    'rgba(16, 185, 129, 0.7)',   // Green
+    'rgba(59, 130, 246, 0.7)',   // Blue
+    'rgba(217, 70, 239, 0.7)',   // Purple
+    'rgba(245, 158, 11, 0.7)',   // Orange
+    'rgba(14, 165, 233, 0.7)',   // Sky blue
+    'rgba(236, 72, 153, 0.7)'    // Pink
+];
+
+const confettiShapes = ['square', 'circle', 'triangle'];
+
+function createBlast(x, y) {
+    const blast = document.createElement('div');
+    blast.classList.add('blast');
+    const size = Math.random() * 100 + 100;
+    blast.style.width = `${size}px`;
+    blast.style.height = `${size}px`;
+    blast.style.left = `${x - size/2}px`;
+    blast.style.top = `${y - size/2}px`;
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    blast.style.backgroundColor = color;
+    blast.style.boxShadow = `0 0 30px ${color}`;
+    const duration = Math.random() * 1.5 + 0.5;
+    blast.style.animation = `blast-animation ${duration}s ease-out forwards`;
+    document.body.appendChild(blast);
+    setTimeout(() => blast.remove(), duration * 1000);
+}
+
+function createConfetti(x, y) {
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti');
+    const size = Math.random() * 10 + 5;
+    confetti.style.width = `${size}px`;
+    confetti.style.height = `${size}px`;
+    confetti.style.left = `${x}px`;
+    confetti.style.top = `${y}px`;
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    confetti.style.backgroundColor = color;
+    const shape = confettiShapes[Math.floor(Math.random() * confettiShapes.length)];
+    if (shape === 'circle') {
+        confetti.style.borderRadius = '50%';
+    } else if (shape === 'triangle') {
+        confetti.style.width = '0';
+        confetti.style.height = '0';
+        confetti.style.backgroundColor = 'transparent';
+        confetti.style.borderLeft = `${size/2}px solid transparent`;
+        confetti.style.borderRight = `${size/2}px solid transparent`;
+        confetti.style.borderBottom = `${size}px solid ${color}`;
+    }
+    const duration = Math.random() * 3 + 2;
+    const horizontalMovement = (Math.random() - 0.5) * 200;
+    confetti.style.animation = `confetti-fall ${duration}s ease-in forwards`;
+    confetti.style.transform = `translateX(${horizontalMovement}px)`;
+    document.body.appendChild(confetti);
+    setTimeout(() => confetti.remove(), duration * 1000);
+}
+
+function celebrate() {
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    for (let i = 0; i < 12; i++) {
+        setTimeout(() => {
+            const offsetX = (Math.random() - 0.5) * 300;
+            const offsetY = (Math.random() - 0.5) * 200;
+            createBlast(centerX + offsetX, centerY + offsetY);
+        }, i * 200);
+    }
+
+    for (let i = 0; i < 100; i++) {
+        setTimeout(() => {
+            const x = Math.random() * window.innerWidth;
+            const y = -20;
+            createConfetti(x, y);
+        }, i * 50);
+    }
+}
+</script>
+
+</body>
+</html>
