@@ -18,7 +18,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("C:\\Users\\sandh\\Downloads\\photo-collage.png-for-bg.png"); /* 🔁 Replace with your image */
+  background-image: url("https://github.com/sandhya547/VS/blob/a8c40916fa3166fe2cbc559338d23090d69fc38b/photo-collage.png-for-bg.png"); /* 🔁 Replace with your image */
   background-size: cover;
   background-position: top center;
   opacity: 0.3; /* 👈 Adjust opacity here */
@@ -206,4 +206,5 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
 
