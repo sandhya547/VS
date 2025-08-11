@@ -17,9 +17,10 @@ body {
   left: 0;
   width: 100%;
   min-height: 100%;
-  background-image: url('photo-collage.png-for-bg.png'); /* 🔁 Replace with your image */
+  background-size: 100% 100%;
+  background-image: url('sv2'); /* 🔁 Replace with your image */
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   opacity: 0.3; /* 👈 Adjust opacity here */
   z-index: -1;
 }
@@ -205,6 +206,7 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
 
 
 
