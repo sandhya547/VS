@@ -19,7 +19,7 @@ body {
   min-height: 100%;
   background-image: url('photo-collage.png-for-bg.png'); /* 🔁 Replace with your image */
   background-size: cover;
-  background-position: top center;
+  background-position: center;
   opacity: 0.3; /* 👈 Adjust opacity here */
   z-index: -1;
 }
@@ -205,6 +205,7 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
 
 
 
