@@ -10,6 +10,16 @@ body {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+
+
  
 /* Full-screen background image with low opacity */
 .background-image {
@@ -206,6 +216,7 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
 
 
 
