@@ -11,7 +11,7 @@ function cutCake() {
 celebrate();
 
 
-  const balloonColors = ['#ff4d4d', '#4da6ff', '#33cc33', '#ffff66', '#ff99cc', '#9966ff', '#ff6600'];
+  /*const balloonColors = ['#ff4d4d', '#4da6ff', '#33cc33', '#ffff66', '#ff99cc', '#9966ff', '#ff6600'];
   const container = document.getElementById("balloonContainer");
 
   for (let i = 0; i < 20; i++) {
@@ -23,10 +23,11 @@ celebrate();
     balloon.style.animationDuration = (4 + Math.random() * 2) + "s";
     balloon.style.animationDelay = (Math.random() * 0.5) + "s";
     container.appendChild(balloon);
-  }
+  }*/
 
   setTimeout(() => {
     window.location.href = "home.html";
   }, 6000);
 
 }
+
