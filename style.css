@@ -9,17 +9,6 @@ body {
   height: 100vh;
   text-align: center;
 }
-
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-  .container {
-    padding: 10px;
-  }
-}
-
-
  
 /* Full-screen background image with low opacity */
 .background-image {
@@ -30,7 +19,7 @@ body {
   height: 100%;
   background-image: url('photo-collage.png-for-bg.png'); /* 🔁 Replace with your image */
   background-size: cover;
-  background-position: top center;
+  background-position: center;
   opacity: 0.3; /* 👈 Adjust opacity here */
   z-index: -1;
 }
@@ -216,6 +205,7 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
 
 
 
