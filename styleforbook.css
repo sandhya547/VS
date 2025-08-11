@@ -3,7 +3,7 @@
   /* duration */
   display: grid;
   place-items: center; /* Center both horizontally and vertically */
-  width: 350px;
+  width: 300px;
   margin-left: 220px;
 }
 
@@ -183,6 +183,7 @@ body {
 }
 
 }
+
 
 
 
