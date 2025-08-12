@@ -180,12 +180,12 @@ body {
   display: grid;
   place-items: center; /* Center both horizontally and vertically */
   width: 300px;
+  margin-left: 50px;
  
-  margin-left: auto;
-    margin-right: auto;
 }
 
 }
+
 
 
 
