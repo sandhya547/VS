@@ -3,8 +3,9 @@
   /* duration */
   display: grid;
   place-items: center; /* Center both horizontally and vertically */
-  width: 300px;
-  margin-left: 220px;
+  width: 500px; /* Increase from 220px to a larger value */
+  margin-left: auto; /* Center horizontally if needed */
+  margin-right: auto;
 }
 
 .title {
@@ -178,11 +179,12 @@ body {
   /* duration */
   display: grid;
   place-items: center; /* Center both horizontally and vertically */
-  width: 150px;
+  width: 300px;
   margin-left: 60px;
 }
 
 }
+
 
 
 
