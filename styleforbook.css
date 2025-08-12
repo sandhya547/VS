@@ -97,7 +97,7 @@ body {
   background: #f8f6f1;
   overflow: hidden;
 }
-
+/*
 .background-image {
   position: fixed;
   top: 0;
@@ -109,7 +109,7 @@ body {
   background-position: top center;
   opacity: 0.3; /* 👈 Adjust opacity here */
   z-index: -1;
-}
+}*/
 
 .home-page {
  
@@ -180,11 +180,13 @@ body {
   display: grid;
   place-items: center; /* Center both horizontally and vertically */
   width: 300px;
-  margin-left: 50px;
+  margin-left: auto;
+  margin-right: auto;
  
 }
 
 }
+
 
 
 
