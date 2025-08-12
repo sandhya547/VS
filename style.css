@@ -27,7 +27,7 @@ body {
 
 .container {
   animation: fadeIn 2s ease;
-   padding-botton: 25%;
+   padding-top: 2%;
   }
 
 .title {
@@ -201,6 +201,7 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
 
 
 
