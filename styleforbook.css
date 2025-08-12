@@ -1,11 +1,8 @@
 .gallery {
   --d: 10s;
-  /* duration */
   display: grid;
-  place-items: center; /* Center both horizontally and vertically */
-  width: 500px; /* Increase from 220px to a larger value */
-  margin-left: auto; /* Center horizontally if needed */
-  margin-right: auto;
+  place-items: center;
+  width: 500px;
 }
 
 .title {
@@ -60,8 +57,6 @@
   --r: -8deg;
 }
 
-
-
 @keyframes slide {
   10% {
     transform: translateX(120%) rotate(var(--r));
@@ -92,32 +87,25 @@
 body {
   margin: 0;
   min-height: 100vh;
-  display: grid;
-  place-content: center;
-  background: #f8f6f1;
-  overflow: hidden;
-}
-
-
-.home-page {
- 
+  display: flex; /* Center everything vertically & horizontally */
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(to bottom, #ffcc99, #ffa3a3);
   font-family: 'Segoe UI', sans-serif;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  position: relative;
   overflow: hidden;
 }
 
+.home-page {
+  text-align: center;
+  position: relative;
+}
 
 #hedlinecontainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 60px;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 #shine {
@@ -129,10 +117,9 @@ body {
   -webkit-background-size: 150px;
   -webkit-background-clip: text;
   -webkit-animation-name: shine;
-  -webkit-animation-duration: 3s; /* Adjust the duration as needed */
+  -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   text-shadow: 0 0px 0px rgba(233, 85, 189, 0.419);
-
 }
 
 @-webkit-keyframes shine {
@@ -152,25 +139,15 @@ body {
 
 @media only screen and (max-width: 600px) {
   #shine {
-  font-size: 22px;
-}
-#hedlinecontainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-bottom: 60px;
-}
-
-.gallery {
-  --d: 10s;
-  /* duration */
-  display: grid;
-  place-items: center; /* Center both horizontally and vertically */
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
- 
-}
-
+    font-size: 22px;
+  }
+  #hedlinecontainer {
+    margin-bottom: 40px;
+  }
+  .gallery {
+    --d: 10s;
+    display: grid;
+    place-items: center;
+    width: 300px;
+  }
 }
